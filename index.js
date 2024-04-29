@@ -1,6 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 const blogRouter = require("./route/blog-route");
+const PORT = process.env.PORT || 5000
 
 require("./db");
 
@@ -14,4 +15,4 @@ app.use("/api", (req, res) => {
   res.send("Hello World!");
 });
 
-app.listen(5000, () => console.log("app is running at 5000"));
+app.listen(PORT, () => console.log(`app is running at ${PORT}`));
